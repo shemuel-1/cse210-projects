@@ -6,7 +6,7 @@ class Program
     {
         int choice = 0;
 
-        while (choice != 4)
+        while (choice != 5)
         {
             DisplayMenu();
 
@@ -22,7 +22,8 @@ class Program
         Console.WriteLine("1. Start Breathing Activity");
         Console.WriteLine("2. Start Reflecting Activity");
         Console.WriteLine("3. Start Listing Activity");
-        Console.WriteLine("4. Quit");
+        Console.WriteLine("4. Start Guided Meditation Activity");
+        Console.WriteLine("5. Quit");
     }
 
     static int GetUserChoice()
@@ -51,6 +52,11 @@ class Program
             listing.Run();
         }
         else if (choice == 4)
+        {
+            GuidedMeditationActivity meditation = new GuidedMeditationActivity();
+            meditation.Run();
+        }
+        else if (choice == 5)
         {
             Console.WriteLine("Thank you for using the Mindfulness App. Goodbye!");
         }
